@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+        <nav>
+            <a href="#" class="logo"><span>Hugo Bolzan</span></a>
+
+            <ul class="links">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#services">Serviços</a>
+                <a href="#contact">Contatos</a>
+            </ul>
+
+            <i class='bx bx-menu-alt-right' id="menu"></i>
+
+            <a href="#contactform" class="btn">Fale Comigo</a>
+        </nav>
+
+        <section id="home">
+            <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="Profile">
+
+            <div class="info-box">
+                <h1><span>Oi, sou o Hugo</span></h1>
+                <h3><span>Backend Developer</span></h3>
+                <p>2° período em ciência da computação na Universidade de Vila Velha - UVV. 1x Oracle Academy Certified | 1x Udemy Certified Python 3 - Curso Completo do Básico ao Avançado | 1x SAP Certification | HTML | CSS | JavaScript | MySQL | Python | MongoDB 
+
+                </p>
+            </div>
+          <h3><span>Advanced English Level</span></h3>
+            <div class="btn-box">
+                <div class="btn">Contratar</div>
+                <a href="#contactform" class="btn">Fale Comigo</a>
+            </div>
+        </section>
+
+        <section id="about">
+
+            <div class="about-box">
+
+                <div class="about-info">
+                    <h1><span>Sobre Mim</span></h1>
+                    <p>Atualmente buscando ampliar meus conhecimentos em programação, onde desenvolvo habilidades sólidas em tomada de decisões 
+                        consistentes e organização eficiente. 
+                        Meu foco está na otimização de processos, sempre buscando maneiras de aprimorá-los com qualidade e eficiência.</p>
+                </div>
+
+                <h2><span>Habilidades</span></h2>
+
+                <div class="skills">
+                    <ul>
+                        <li>
+                            <span><i class='bx bx-chevron-right'></i>HTML</span>
+                        </li>
+
+                        <li>
+                            <span><i class='bx bx-chevron-right'></i>CSS</span>
+                        </li>
+
+                        <li>
+                            <span><i class='bx bx-chevron-right'></i>JAVASCRIPT</span>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <span><i class='bx bx-chevron-right'></i>PYTHON</span>
+                        </li>
+
+                        <li>
+                            <span><i class='bx bx-chevron-right'></i>MONGODB</span>
+                        </li>
+
+                        <li>
+                            <span><i class='bx bx-chevron-right'></i>MYSQL</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="Profile">
+         </section>
+    
+         <section id="services">
+            <h1 class="header"><span>Experiências
+            </span></h1>
+
+            <div class="services-container">
+
+                <div class="box">
+                    <h1><span>Junior Backend Developer</span></h1>
+
+                    <p>Sou dev backend, trabalhando com Python, SQL, MySQL e MongoDB. Com planos futuros de expandir meu conhecimento em frameworks como Ruby on Rails e Django, além de explorar ainda mais minhas 
+competências em banco de dados SQL e NoSQL.</p>
+                <img src="{{ url_for('static', filename='images/backend.jpg') }}" alt="Profile">
+                </div>
+                <div class="box">
+                    <h1><span>Ex-Jogador de Basquete</span></h1>
+
+                    <p>Desde 2013 a 2023, atuei como jogador de basquete em times renomados,
+                         incluindo o Clube de Regatas do Flamengo.
+                         Essa experiência me proporcionou um profundo entendimento de como lidar com o trabalho em equipe e alta demanda.</p>
+                         <img src="{{ url_for('static', filename='images/athlete.jpg') }}" alt="Profile">
+                </div>
+                <div class="box">
+                    <h1><span>Estudante Universitário</span></h1>
+
+                    <p>Sou um estudante universitário em busca do conhecimento e excelência acadêmica. Desde que ingressei na faculdade,
+                        tenho dedicado todo o meu tempo e energia para absorver o máximo de aprendizado possível em minha área de estudo.</p>
+                        <img src="{{ url_for('static', filename='images/university.jpg') }}" alt="Profile">
+                </div>
+            </div>
+         </section>
+
+         <section id="contact">
+            <section id="contactform">
+            
+            
+            <h1 class="header"><span>Contato</span></h1>
+
+            <form action="/send" method="POST">
+
+                <div class="input-box">
+                    <span>Nome Completo</span>
+                    <input type="text" name="name" placeholder="Digite seu nome completo" required>
+                </div>
+            
+                <div class="input-box">
+                    <span>Seu Email</span>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                </div>
+            
+                <div class="input-box">
+                    <span>Sua Mensagem</span>
+                    <input type="text" name="message" placeholder="Escreva sua mensagem" required>
+                </div>
+            
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+        </section>
+         </section>
+
+         <footer>
+
+            <div class="col-left">
+                <div class="col-box">
+                    <span><i class='bx bxs-location-plus'></i></span>
+                    <span>Vila Velha, ES - Brasil</span>
+              </div>
+
+              <div class="col-box">
+                <span><i class='bx bxs-phone'></i></span>
+                <span>+55 (27)99761-1547</span>
+          </div>
+          <div class="col-box">
+            <span><i class='bx bxs-envelope'></i></span>
+            <span>hugobolzan29@gmail.com</span>
+         </div>
+        </div>
+        <div class="col-right">
+        <span>Sobre meus serviços</span>
+        <p>Ofereço soluções rápidas e eficientes para suas necessidades. Com experiência em Python, SQL e MySQL, estou preparado para criar e otimizar sistemas e bancos de dados. Aberto a oportunidades de estágio.</p>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugowhatt/" target="_blank" title="Instagram">
+                <span><i class='bx bxl-instagram-alt'></i></span>
+            </a>
+            <a href="https://www.linkedin.com/in/hugo-bolzan-075481302/" target="_blank" title="LinkedIn">
+                <span><i class='bx bxl-linkedin-square'></i></span>
+            </a>
+            <a href="https://github.com/HughCoding" target="_blank" title="GitHub">
+                <span><i class='bx bxl-github'></i></span>
+            </a>
+        </div>        
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
